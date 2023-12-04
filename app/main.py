@@ -15,11 +15,11 @@ from urllib3.exceptions import (
 # git使用cnpmjs镜像、分支文件使用jsDelivr镜像的开关，0为关闭，默认关闭
 jsdelivr = 0
 cnpmjs = 0
-size_limit = 1024 * 1024 * 1024 * 999  # 允许的文件大小，默认999GB，相当于无限制了 https://github.com/wuge520/gh-proxy/issues/8
+size_limit = 1024 * 1024 * 1024 * 999  # 允许的文件大小，默认999GB，相当于无限制了 https://github.com/cymcn/gh-proxy/issues/8
 
 """
   先生效白名单再匹配黑名单，pass_list匹配到的会直接302到jsdelivr/cnpmjs而忽略设置
-  生效顺序 白->黑->pass，可以前往https://github.com/hwuge520/gh-proxy/issues/41 查看示例
+  生效顺序 白->黑->pass，可以前往https://github.com/cymcn/gh-proxy/issues/41 查看示例
   每个规则一行，可以封禁某个用户的所有仓库，也可以封禁某个用户的特定仓库，下方用黑名单示例，白名单同理
   user1 # 封禁user1的所有仓库
   user1/repo1 # 封禁user1的repo1
